@@ -1,0 +1,199 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/fond-ecran.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 100vh;
+}
+
+
+
+.santa-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Blanc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajouter ces styles pour styliser les flocons de neige */
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* Blanc */
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #78c2ad; /* Vert clair */
+    color: #ffffff; /* Blanc */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #457aa2; /* Vert foncé */
+    color: #ffffff; /* Blanc */
+    position: relative;
+    overflow: hidden;
+}
+
+.santa-container {
+    position: relative;
+}
+
+.santa {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: santaMove 5s linear infinite;
+}
+
+.reindeer {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% + 100px);
+    width: 50px;
+    height: 30px;
+    background: url('reindeer.png') no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+@keyframes santaMove {
+    0% {
+        transform: translateX(-50%) rotateY(0deg);
+    }
+    50% {
+        transform: translateX(calc(50% - 50px)) rotateY(180deg);
+    }
+    100% {
+        transform: translateX(-50%) rotateY(360deg);
+    }
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Blanc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.countdown-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligner à droite */
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9534f; /* Rouge */
+    text-align: right; /* Aligner le texte à droite */
+    width: 100%; /* S'assurer que le texte occupe toute la largeur */
+}
+
+.navbar {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
