@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr_FR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulaire d'Inscription</title>
-</head>
-<body>
-    <h1>Inscription</h1>
-    <form action="inscription.php" method="post">
+    <link rel="stylesheet" href="formulaire.css" />
+  </head>
+  <body>
+    <form action="inscription.php" method="post" class="mon-formulaire">
+      <div class="champ-formulaire">
         <label for="pseudo">Pseudo :</label>
-        <input type="text" id="pseudo" name="pseudo" required><br>
-
+        <input type="text" id="pseudo" name="pseudo" required /><br />
+      </div>
+      <div class="champ-formulaire">
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email" required /><br />
+      </div>
+      <div class="champ-formulaire">
+        <label id="msg" for="message">Votre Message</label>
 
-        <label for="message">votre message</label>:</label>
         <textarea id="msg" name="msg" rows="5" cols="33"></textarea>
-
-        <input type="submit" value="S'inscrire">
+      </div>
+      <div class="champ-formulaire">
+        <input id="sub" type="submit" value="S'inscrire" />
+      </div>
     </form>
-</body>
+  </body>
 </html>
